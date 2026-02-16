@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+.header {
+    background: #0b1f3a;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tab-container {
+    padding: 20px;
+}
