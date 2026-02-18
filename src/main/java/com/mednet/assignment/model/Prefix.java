@@ -18,7 +18,8 @@ public class Prefix {
 
     @Column(name = "prefix_of")
     private String prefixOf;
-    // Getter and Setter for ID
+
+    //getter and setter
     public Long getId() {
         return id;
     }
@@ -27,7 +28,6 @@ public class Prefix {
         this.id = id;
     }
 
-    // Getter and Setter for prefixName
     public String getPrefixName() {
         return prefixName;
     }
@@ -36,7 +36,6 @@ public class Prefix {
         this.prefixName = prefixName;
     }
 
-    // Getter and Setter for gender
     public String getGender() {
         return gender;
     }
@@ -45,7 +44,6 @@ public class Prefix {
         this.gender = gender;
     }
 
-    // Getter and Setter for prefixOf
     public String getPrefixOf() {
         return prefixOf;
     }
@@ -53,4 +51,8 @@ public class Prefix {
     public void setPrefixOf(String prefixOf) {
         this.prefixOf = prefixOf;
     }
+
+
+    // Getter and Setter for ID
+
 }

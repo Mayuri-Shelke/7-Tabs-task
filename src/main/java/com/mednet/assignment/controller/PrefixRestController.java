@@ -13,7 +13,6 @@ import java.util.Map;
 @RequestMapping("/prefix")
 @CrossOrigin(origins = "*")
 public class PrefixRestController {
-
     @Autowired
     private PrefixDAO prefixDAO;
 

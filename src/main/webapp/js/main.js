@@ -13,7 +13,8 @@ Ext.onReady(function() {
             Tab4.create(),
             Tab5.create(),
             Tab6.create(),
-            Tab7.create()
+            Tab7.create(),
+            Tab8.create()
         ]
     });
 });

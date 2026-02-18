@@ -17,7 +17,7 @@ var Tab1 = (function() {
                     items: [
                         {
                             xtype: 'component',
-                            html: '<label style="display: inline-block; width: 150px; font-weight: bold;">DEPARTMENT:</label>',
+                            html: '<label style="display: inline-block; width: 150px; font-weight: bold;">Department:</label>',
                             flex: 0
                         },
                         {
@@ -30,19 +30,9 @@ var Tab1 = (function() {
                                   '<option value="HEMA">HAEMATOLOGY</option>' +
                                   '</select>',
                             flex: 1
-                        },
-                        {
-                            xtype: 'component',
-                            html: '<label style="display: inline-block; width: 150px; font-weight: bold; margin-left: 30px;">STATIC VALUE:</label>',
-                            flex: 0
-                        },
-                        {
-                            xtype: 'component',
-                            html: '<select id="html-static" style="width: 200px; padding: 5px;" disabled>' +
-                                  '<option value="static">Static Value</option>' +
-                                  '</select>',
-                            flex: 1
                         }
+
+
                     ]
                 },
                 {
@@ -64,6 +54,7 @@ var Tab1 = (function() {
                             xtype: 'combobox',
                             fieldLabel: 'Department',
                             labelWidth: 150,
+                            labelStyle: "font-weight:bold;",
                             store: StaticStores.getDepartmentStore(),
                             queryMode: 'local',
                             displayField: 'name',
@@ -71,25 +62,8 @@ var Tab1 = (function() {
                             width: 400,
                             flex: 0,
                             editable: true
-                        },
-                        {
-                            xtype: 'combobox',
-                            fieldLabel: 'Static Value',
-                            labelWidth: 150,
-                            store: Ext.create('Ext.data.Store', {
-                                fields: ['value', 'display'],
-                                data: [
-                                    {"value": "static", "display": "Static Value"}
-                                ]
-                            }),
-                            queryMode: 'local',
-                            displayField: 'display',
-                            valueField: 'value',
-                            width: 300,
-                            flex: 0,
-                            editable: false,
-                            margin: '0 0 0 30'
                         }
+
                     ]
                 },
                 {

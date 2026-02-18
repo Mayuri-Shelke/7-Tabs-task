@@ -32,6 +32,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            font-size: 100px;
         }
         .tab-title { font-weight: bold; color: #333; }
         .search-panel { background: #f0f0f0; padding: 10px; margin-bottom: 10px; }
@@ -48,6 +49,7 @@
     <script type="text/javascript" src="js/tab5.js"></script>
     <script type="text/javascript" src="js/tab6.js"></script>
     <script type="text/javascript" src="js/tab7.js"></script>
+    <script type="text/javascript" src="js/tab8.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body></body>
