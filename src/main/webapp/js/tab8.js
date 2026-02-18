@@ -17,16 +17,20 @@ var Tab8 = (function() {
             return;
         }
         var msg = data.message || 'Hello World';
-        var lastAt = data.lastTriggeredAt != null ? data.lastTriggeredAt : 'Not triggered yet';
+        var lastAt = (data.cronTriggeredAt != null ? data.cronTriggeredAt : data.lastTriggeredAt) != null
+            ? (data.cronTriggeredAt != null ? data.cronTriggeredAt : data.lastTriggeredAt)
+            : 'Not triggered yet';
+        var nextAt = data.cronNextTriggeredAt != null ? data.cronNextTriggeredAt : '—';
         var runCount = data.runCount != null ? data.runCount : 0;
-        var cronExpr = data.cronExpression || '';
+        var cronExpr = data.cronTrigger || data.cronExpression || '';
         var serverTime = data.serverTime != null ? data.serverTime : '';
         el.innerHTML =
             '<div style="' + cardStyle + '">' +
             '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Message</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(msg) + '</span></div>' +
-            '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Last triggered at</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(String(lastAt)) + '</span></div>' +
+            '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Cron Triggered At</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(String(lastAt)) + '</span></div>' +
+            '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Next Trigger At</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(String(nextAt)) + '</span></div>' +
             '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Run count</span><span style="' + valueStyle + '">' + runCount + '</span></div>' +
-            '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Schedule</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(cronExpr || '—') + '</span></div>' +
+            '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Cron Trigger</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(cronExpr || '—') + '</span></div>' +
             '<div style="' + rowStyle + '"><span style="' + labelStyle + '">Server time</span><span style="' + valueStyle + '">' + Ext.String.htmlEncode(serverTime || '—') + '</span></div>' +
             '</div>';
     }
